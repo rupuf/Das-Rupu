@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jervis AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="hologram-panel">
+    <div class="animated-circles-container">
+        <div class="animated-circle"></div>
+        <div class="animated-circle"></div>
+        <div class="animated-circle"></div>
+    </div>
+    <div class="top-bar">
+        <div class="logo">
+            JARVIS
+        </div>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z" fill="var(--jervis-blue)"/>
+        </svg>
+    </div>
+
+    <div class="main-content">
+        <div class="jervis-avatar" id="jervis-avatar"></div>
+        <div class="status-text" id="status-text">जर्विस निष्क्रिय है</div>
+    </div>
+    
+    <div class="chat-container hidden" id="chat-container">
+        <div class="jervis-message message">
+            <span class="message-text">नमस्ते, मैं जर्विस हूँ। मैं आपकी क्या मदद कर सकता हूँ?</span>
+            <svg class="speaker-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-text="नमस्ते, मैं जर्विस हूँ। मैं आपकी क्या मदद कर सकता हूँ?">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            </svg>
+        </div>
+    </div>
+    
+    <div class="input-container">
+        <button id="mic-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mic"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+        </button>
+        <input type="text" id="text-input" placeholder="Text...">
+        <button id="send-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+        </button>
+    </div>
+</div>
+
+<div id="message-box" class="message-box">
+    <p id="message-text"></p>
+    <button onclick="hideMessageBox()">ठीक है</button>
+</div>
+
+<div id="loading-spinner" class="loading-container">
+    <div class="spinner"></div>
+</div>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>
